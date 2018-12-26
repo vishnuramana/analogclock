@@ -1,0 +1,13 @@
+{
+  "main.css": "/analogclock/static/css/main.ef6d065c.chunk.css",
+  "main.js": "/analogclock/static/js/main.a7686b94.chunk.js",
+  "main.js.map": "/analogclock/static/js/main.a7686b94.chunk.js.map",
+  "static/js/1.77958300.chunk.js": "/analogclock/static/js/1.77958300.chunk.js",
+  "static/js/1.77958300.chunk.js.map": "/analogclock/static/js/1.77958300.chunk.js.map",
+  "runtime~main.js": "/analogclock/static/js/runtime~main.d29e5bdd.js",
+  "runtime~main.js.map": "/analogclock/static/js/runtime~main.d29e5bdd.js.map",
+  "static/css/main.ef6d065c.chunk.css.map": "/analogclock/static/css/main.ef6d065c.chunk.css.map",
+  "index.html": "/analogclock/index.html",
+  "precache-manifest.62f165e24c0fd4a253c3ab31015124dc.js": "/analogclock/precache-manifest.62f165e24c0fd4a253c3ab31015124dc.js",
+  "service-worker.js": "/analogclock/service-worker.js"
+}
