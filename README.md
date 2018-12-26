@@ -3,7 +3,7 @@
 This is an Analog clock built using React (initialized with create-react-app).
 
 ## Demo
-You can view the demo here
+You can view the demo [here](http://vishnuramana.github.io/analogclock)
 
 ## Usage
 You can import the `MyClock` component to use the clock.
