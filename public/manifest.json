@@ -1,0 +1,6 @@
+{
+  "short_name": "AnalogClock",
+  "name": "Analog Clock using React",
+  "start_url": ".",
+  "display": "standalone"
+}
