@@ -4,14 +4,15 @@ import SecondHand from './SecondHand.js';
 import MinuteHand from './MinuteHand.js';
 import HourHand from './HourHand.js';
 
-class MyClock extends Component {
+class AnalogClock extends Component {
 
     constructor(props) {
         super(props);
+        let date = new Date();
         this.state = {
-            seconds: 0,
-            minutes: 0,
-            hours: 0
+            seconds: date.getSeconds(),
+            minutes: date.getMinutes(),
+            hours: date.getHours() > 12 ? date.getHours() - 12 : date.getHours()
         }
     }
 
@@ -29,15 +30,17 @@ class MyClock extends Component {
     render() {
         return (
             <div className="clock-container">
-                <div className="clock-base">
-                    <div className="clock-center"></div>
-                    <SecondHand currSecond={this.state.seconds} />
-                    <MinuteHand currMinute={this.state.minutes} />
-                    <HourHand currHour={this.state.hours} />
+                <div className="clock-base-border">
+                    <div className="clock-base">
+                        <div className="clock-center"></div>
+                        <SecondHand currSecond={this.state.seconds} />
+                        <MinuteHand currMinute={this.state.minutes} />
+                        <HourHand currHour={this.state.hours} />
+                    </div>
                 </div>
             </div>
         )
     }
 }
 
-export default MyClock;
+export default AnalogClock;
