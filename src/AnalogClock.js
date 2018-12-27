@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { ClockContainer, ClockBaseBorder, ClockBase, ClockCenter } from './ClockComponents';
 import './Clock.css';
 import SecondHand from './SecondHand.js';
 import MinuteHand from './MinuteHand.js';
@@ -28,17 +29,19 @@ class AnalogClock extends Component {
     }
 
     render() {
+        const { width, border, borderColor, baseColor } = this.props;
         return (
-            <div className="clock-container">
-                <div className="clock-base-border">
-                    <div className="clock-base">
-                        <div className="clock-center"></div>
+            <ClockContainer width={width}>
+                <ClockBaseBorder border={border} borderColor={borderColor}>
+                    <ClockBase baseColor={baseColor}>
+                        <ClockCenter />
                         <SecondHand currSecond={this.state.seconds} />
                         <MinuteHand currMinute={this.state.minutes} />
                         <HourHand currHour={this.state.hours} />
-                    </div>
-                </div>
-            </div>
+                    </ClockBase>
+                </ClockBaseBorder>
+            </ClockContainer>
+
         )
     }
 }
