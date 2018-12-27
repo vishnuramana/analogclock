@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 
 const ClockContainer = styled.div`
         	height: ${props => props.width || "400px"};
@@ -35,4 +35,36 @@ const ClockCenter = styled.div`
             z-index: 100;
         `;
 
-export { ClockContainer, ClockBaseBorder, ClockBase, ClockCenter };
+const ClockHand = styled.div`
+            position: absolute;
+            top: 50%;
+            left: ${props => props.type === 'second' ? "40%" : "45%"};
+            outline: ${props => props.type === 'second' ? "2px solid #d81c7a" : "2px solid #fff"};
+
+            ${props => props.type === 'second' && css`
+                    width:60%;
+                    transform-origin: 17%;
+                    transform: rotate(${props => props.handAngle}deg);
+                    // animation: ${props => props.secondStartAngle && sweep(props.secondStartAngle)} 60s linear 0s infinite;
+            `}
+            ${props => props.type === 'minute' && css`
+                    width:45%;
+                    transform-origin: 12%;
+                    transform: rotate(${props => props.handAngle}deg);
+            `}
+            ${props => props.type === 'hour' && css`
+                    width:35%;
+                    transform-origin: 15%;
+                    transform: rotate(${props => props.handAngle}deg);
+            `}
+        `;
+
+const sweep = (secondStartAngle) => keyframes`
+    from {
+        transform: rotate(${secondStartAngle}deg)}
+    }
+    to {
+        transform: rotate(${secondStartAngle + 360}deg)}
+    }`
+
+export { ClockContainer, ClockBaseBorder, ClockBase, ClockCenter, ClockHand };

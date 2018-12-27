@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { ClockContainer, ClockBaseBorder, ClockBase, ClockCenter } from './ClockComponents';
-import './Clock.css';
-import SecondHand from './SecondHand.js';
-import MinuteHand from './MinuteHand.js';
-import HourHand from './HourHand.js';
+import Hand from './Hand.js';
 
 class AnalogClock extends Component {
 
@@ -35,9 +32,9 @@ class AnalogClock extends Component {
                 <ClockBaseBorder border={border} borderColor={borderColor}>
                     <ClockBase baseColor={baseColor}>
                         <ClockCenter />
-                        <SecondHand currSecond={this.state.seconds} />
-                        <MinuteHand currMinute={this.state.minutes} />
-                        <HourHand currHour={this.state.hours} />
+                        <Hand type="second" {...this.state} />
+                        <Hand type="minute" {...this.state} />
+                        <Hand type="hour" {...this.state} />
                     </ClockBase>
                 </ClockBaseBorder>
             </ClockContainer>
