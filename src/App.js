@@ -5,10 +5,10 @@ class App extends Component {
 
   render() {
     let options={
-      "width" : "400px",
-      "border": true,
-      "border-color": "#ff9e9e",
-      "base-color": "#223480"
+      width : "300px",
+      border: true,
+      borderColor: "#ff9e9e",
+      baseColor: "#223480"
     }
     return (
       <div className="app">
