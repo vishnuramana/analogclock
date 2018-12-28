@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/analogclock/precache-manifest.efcb4cc56db7e7a4d8121d7c45025a59.js"
+  "/analogclock/precache-manifest.6513e1ccfee3e9151528e7f58128bdcd.js"
 );
 
 workbox.clientsClaim();
