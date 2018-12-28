@@ -12,6 +12,7 @@ class Form extends Component {
         this.setBorderColor = this.setBorderColor.bind(this);
         this.setBaseColor = this.setBaseColor.bind(this);
         this.buildClock = this.buildClock.bind(this);
+        this.randomClock = this.randomClock.bind(this);
     }
 
     setClockSize(event) {
@@ -43,6 +44,24 @@ class Form extends Component {
         this.props.customizeClock(this.state.options);
     }
 
+    randomClock(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        let baseColor = this.getRandomColor();
+        let borderColor = this.getRandomColor();
+        this.setState({ options: { ...this.state.options, borderColor, baseColor } }, () => this.buildClock(event));
+    }
+
+    getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var colorCode = '#';
+        for (var i = 0; i < 6; i++) {
+            colorCode += letters[Math.floor(Math.random() * 16)];
+        }
+        return colorCode;
+    }
+
+
     render() {
         return (
             <form className="form">
@@ -68,9 +87,11 @@ class Form extends Component {
                 </div>
                 <div class="form-group">
                     <label for="clock-base-color">Clock base color</label>
-                    <input type="input" class="form-control" id="clock-base-color" maxLength="6" placeholder="ffffff" onChange={this.setBaseColor} />
+                    <input type="input" class="form-control" id="clock-base-color" maxLength="6" placeholder="17a2b8" onChange={this.setBaseColor} />
                 </div>
                 <button type="submit" class="btn btn-primary" onClick={this.buildClock}>Build Clock!</button>
+                &nbsp;
+                <button type="submit" class="btn btn-warning" onClick={this.randomClock}>Surprise Me!</button>
             </form>
         )
     }

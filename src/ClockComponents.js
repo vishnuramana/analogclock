@@ -45,6 +45,7 @@ const ClockHand = styled.div`
                     width:60%;
                     transform-origin: 17%;
                     transform: rotate(${props => props.handAngle}deg);
+                    transition: ${props => props.handAngle > 270 && 'transform 250ms ease-in-out'};
                     // animation: ${props => props.secondStartAngle && sweep(props.secondStartAngle)} 60s linear 0s infinite;
             `}
             ${props => props.type === 'minute' && css`

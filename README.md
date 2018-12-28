@@ -16,8 +16,8 @@ Then use the `AnalogClock` Component like this
     let options = {
         width:  "300px",
         border:  true,
-        borderColor:  "#ff9e9e",
-        baseColor:  "#223480"
+        borderColor:  "#2e2e2e",
+        baseColor:  "#17a2b8"
     };
     .....
     <AnalogClock {...options} />
@@ -28,7 +28,8 @@ Please visit the [demo](http://vishnuramana.github.io/analogclock) page to get a
 
 ## Future Development
 
-  - Add timezone support
+  - Add timezone support.
+  - Add more customizations into props.
   - @keyframes support for smooth rotation of second hand.
 
 License

@@ -11,8 +11,8 @@ class App extends Component {
       options: {
         width: "300px",
         border: true,
-        borderColor: "#ff9e9e",
-        baseColor: "#223480"
+        borderColor: "#2e2e2e",
+        baseColor: "#17a2b8"
       }
     };
     this.customizeClock = this.customizeClock.bind(this);
