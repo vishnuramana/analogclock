@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/analogclock/static/js/runtime~main.d29e5bdd.js"
   },
   {
-    "revision": "0d8206157031a63758d4d09e29c9dbff",
+    "revision": "694158064ba9ed3a371dd86a669e677d",
     "url": "/analogclock/index.html"
   }
 ];
