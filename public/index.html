@@ -1,14 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Analog Clock built using React - Demo</title>
-  </head>
-  <body>
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
-    <div id="root"></div>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Analog Clock built using React - Demo</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <noscript>
+          You need to enable JavaScript to run this app.
+        </noscript>
+        <div class="bg-info jumbotron text-light text-md-center">
+          <h1 class="display-4">Analog Clock built using React!</h1>
+          <p class="lead">This is an analog clock completely built using React. It is customizable by passing an
+            options JSON Object
+            to the component.</p>
+          <hr class="my-4">
+          <p>You can try the different customization options by using the form below. Once you are done, you can copy
+            the JSON object generated for your clock !</p>
+          <a href="https://github.com/vishnuramana/analogclock" class="btn btn-outline-light" role="button"
+            aria-pressed="true">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div id="root" class="pb-5"></div>
+  </div>
+  <footer class="footer">
+    <div class="container text-md-center">
+      <span class="text-muted">Made with 💙</span>
+    </div>
+  </footer>
+</body>
+
 </html>
