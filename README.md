@@ -7,17 +7,23 @@ This is an customizable analog clock completely built using React. It is customi
 ## Demo
 You can customize/view a live demo of the clock [here](http://vishnuramana.github.io/analogclock).
 
+## Installation
+Install the package using
+
+    npm install --save analog-clock-react
+    
 ## Usage
 Import the  `AnalogClock` component into your React Component like this
 
-    import AnalogClock from './AnalogClock.js';
+    import AnalogClock from 'analog-clock-react';
+    
 Then use the `AnalogClock` Component like this
 
     let options = {
         width:  "300px",
         border:  true,
-        borderColor:  "#2e2e2e",
-        baseColor:  "#17a2b8"
+        borderColor:  "#ff9e9e",
+        baseColor:  "#223480"
     };
     .....
     <AnalogClock {...options} />
@@ -28,8 +34,7 @@ Please visit the [demo](http://vishnuramana.github.io/analogclock) page to get a
 
 ## Future Development
 
-  - Add timezone support.
-  - Add more customizations into props.
+  - Add timezone support
   - @keyframes support for smooth rotation of second hand.
 
 License
