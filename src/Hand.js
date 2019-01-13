@@ -20,7 +20,8 @@ class Hand extends Component {
 
     render() {
         return (
-            <ClockHand type={this.props.type} handAngle={Util.getHandAngle(this.props)} {...this.state} />
+            <ClockHand type={this.props.type} handAngle={Util.getHandAngle(this.props)} {...this.state}
+                handColors={this.props.handColors} />
         )
     }
 

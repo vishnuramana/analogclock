@@ -20,10 +20,16 @@ Import the  `AnalogClock` component into your React Component like this
 Then use the `AnalogClock` Component like this
 
     let options = {
-        width:  "300px",
-        border:  true,
-        borderColor:  "#ff9e9e",
-        baseColor:  "#223480"
+        width: "300px",
+        border: true,
+        borderColor: "#2e2e2e",
+        baseColor: "#17a2b8",
+        centerColor: "#459cff",
+        handColors: {
+          second: "#d81c7a",
+          minute: "#fff",
+          hour: "#fff"
+        }
     };
     .....
     <AnalogClock {...options} />
