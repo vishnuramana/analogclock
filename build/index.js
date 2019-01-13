@@ -161,7 +161,9 @@ function (_Component) {
           width = _this$props.width,
           border = _this$props.border,
           borderColor = _this$props.borderColor,
-          baseColor = _this$props.baseColor;
+          baseColor = _this$props.baseColor,
+          centerColor = _this$props.centerColor,
+          handColors = _this$props.handColors;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ClockComponents__WEBPACK_IMPORTED_MODULE_1__["ClockContainer"], {
         width: width
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ClockComponents__WEBPACK_IMPORTED_MODULE_1__["ClockBaseBorder"], {
@@ -169,13 +171,21 @@ function (_Component) {
         borderColor: borderColor
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ClockComponents__WEBPACK_IMPORTED_MODULE_1__["ClockBase"], {
         baseColor: baseColor
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ClockComponents__WEBPACK_IMPORTED_MODULE_1__["ClockCenter"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Hand_js__WEBPACK_IMPORTED_MODULE_2__["default"], _extends({
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ClockComponents__WEBPACK_IMPORTED_MODULE_1__["ClockCenter"], {
+        centerColor: centerColor
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Hand_js__WEBPACK_IMPORTED_MODULE_2__["default"], _extends({
         type: "second"
-      }, this.state)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Hand_js__WEBPACK_IMPORTED_MODULE_2__["default"], _extends({
+      }, this.state, {
+        handColors: handColors
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Hand_js__WEBPACK_IMPORTED_MODULE_2__["default"], _extends({
         type: "minute"
-      }, this.state)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Hand_js__WEBPACK_IMPORTED_MODULE_2__["default"], _extends({
+      }, this.state, {
+        handColors: handColors
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Hand_js__WEBPACK_IMPORTED_MODULE_2__["default"], _extends({
         type: "hour"
-      }, this.state)))));
+      }, this.state, {
+        handColors: handColors
+      })))));
     }
   }]);
 
@@ -213,7 +223,7 @@ function _templateObject9() {
 }
 
 function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\n                    width:35%;\n                    transform-origin: 15%;\n                    transform: rotate(", "deg);\n            "]);
+  var data = _taggedTemplateLiteral(["\n                    width:35%;\n                    outline: ", ";\n                    transform-origin: 15%;\n                    transform: rotate(", "deg);\n            "]);
 
   _templateObject8 = function _templateObject8() {
     return data;
@@ -223,7 +233,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n                    width:45%;\n                    transform-origin: 12%;\n                    transform: rotate(", "deg);\n            "]);
+  var data = _taggedTemplateLiteral(["\n                    width:45%;\n                    outline: ", ";\n                    transform-origin: 11.5%;\n                    transform: rotate(", "deg);\n            "]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -233,7 +243,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n                    width:60%;\n                    transform-origin: 17%;\n                    transform: rotate(", "deg);\n                    transition: ", ";\n                    // animation: ", " 60s linear 0s infinite;\n            "]);
+  var data = _taggedTemplateLiteral(["\n                    width: 59.4%;\n                    outline: ", ";\n                    transform-origin: 17%;\n                    transform: rotate(", "deg);\n                    transition: ", ";\n                    // animation: ", " 60s linear 0s infinite;\n            "]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -243,7 +253,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n            position: absolute;\n            top: 50%;\n            left: ", ";\n            outline: ", ";\n\n            ", "\n            ", "\n            ", "\n        "]);
+  var data = _taggedTemplateLiteral(["\n            position: absolute;\n            top: 50%;\n            left: ", ";\n\n            ", "\n            ", "\n            ", "\n        "]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -253,7 +263,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n            position: absolute;\n            left: 50%;\n            top: 50%;\n            width: 12px;\n            height: 12px;\n            border: 2px solid #fff;\n            background-color: #459cff;\n            border-radius: 100%;\n            margin-left: -6px;\n            margin-top: -9px;\n            z-index: 100;\n        "]);
+  var data = _taggedTemplateLiteral(["\n            position: absolute;\n            left: 50%;\n            top: 50%;\n            width: 12px;\n            height: 12px;\n            border: 2px solid #fff;\n            background-color: ", ";\n            border-radius: 100%;\n            margin-left: -6px;\n            margin-top: -6px;\n            z-index: 100;\n        "]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -308,13 +318,15 @@ var ClockBaseBorder = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].
 var ClockBase = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(_templateObject3(), function (props) {
   return props.baseColor ? props.baseColor : "black";
 });
-var ClockCenter = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(_templateObject4());
+var ClockCenter = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(_templateObject4(), function (props) {
+  return props.centerColor ? props.centerColor : "#459cff";
+});
 var ClockHand = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(_templateObject5(), function (props) {
   return props.type === 'second' ? "40%" : "45%";
 }, function (props) {
-  return props.type === 'second' ? "2px solid #d81c7a" : "2px solid #fff";
-}, function (props) {
   return props.type === 'second' && Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["css"])(_templateObject6(), function (props) {
+    return props.handColors && props.handColors.second ? "2px solid " + props.handColors.second : "2px solid #d81c7a";
+  }, function (props) {
     return props.handAngle;
   }, function (props) {
     return props.handAngle > 270 && 'transform 250ms ease-in-out';
@@ -323,10 +335,14 @@ var ClockHand = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(_t
   });
 }, function (props) {
   return props.type === 'minute' && Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["css"])(_templateObject7(), function (props) {
+    return props.handColors && props.handColors.minute ? "2px solid " + props.handColors.minute : "2px solid #fff";
+  }, function (props) {
     return props.handAngle;
   });
 }, function (props) {
   return props.type === 'hour' && Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["css"])(_templateObject8(), function (props) {
+    return props.handColors && props.handColors.hour ? "2px solid " + props.handColors.hour : "2px solid #fff";
+  }, function (props) {
     return props.handAngle;
   });
 });
@@ -3480,7 +3496,7 @@ function index (resultFn, isEqual) {
   var calledOnce = false;
 
   var isNewArgEqualToLast = function isNewArgEqualToLast(newArg, index) {
-    return isEqual(newArg, lastArgs[index]);
+    return isEqual(newArg, lastArgs[index], index);
   };
 
   var result = function result() {
@@ -25743,7 +25759,9 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ClockComponents__WEBPACK_IMPORTED_MODULE_1__["ClockHand"], _extends({
         type: this.props.type,
         handAngle: _Util__WEBPACK_IMPORTED_MODULE_2__["default"].getHandAngle(this.props)
-      }, this.state));
+      }, this.state, {
+        handColors: this.props.handColors
+      }));
     }
   }]);
 

@@ -26,15 +26,15 @@ class AnalogClock extends Component {
     }
 
     render() {
-        const { width, border, borderColor, baseColor } = this.props;
+        const { width, border, borderColor, baseColor, centerColor, handColors } = this.props;
         return (
             <ClockContainer width={width}>
                 <ClockBaseBorder border={border} borderColor={borderColor}>
                     <ClockBase baseColor={baseColor}>
-                        <ClockCenter />
-                        <Hand type="second" {...this.state} />
-                        <Hand type="minute" {...this.state} />
-                        <Hand type="hour" {...this.state} />
+                        <ClockCenter centerColor={centerColor} />
+                        <Hand type="second" {...this.state} handColors={handColors} />
+                        <Hand type="minute" {...this.state} handColors={handColors} />
+                        <Hand type="hour" {...this.state} handColors={handColors} />
                     </ClockBase>
                 </ClockBaseBorder>
             </ClockContainer>
