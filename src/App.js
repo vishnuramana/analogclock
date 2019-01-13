@@ -12,30 +12,37 @@ class App extends Component {
         width: "300px",
         border: true,
         borderColor: "#2e2e2e",
-        baseColor: "#17a2b8"
+        baseColor: "#17a2b8",
+        centerColor: "#459cff",
+        handColors: {
+          second: "#d81c7a",
+          minute: "#fff",
+          hour: "#fff"
+        }
       }
     };
     this.customizeClock = this.customizeClock.bind(this);
   }
 
   customizeClock(options) {
-    console.log(options)
     this.setState({ options: { ...options } });
   }
 
   render() {
     return (
-      <div className="row">
-        <div className="col-4 border-right">
+      <div>
+        <div className="row">
           <Form defaultOptions={this.state.options} customizeClock={this.customizeClock} />
         </div>
-        <div className="col border-right">
-          <h4><i>Options</i></h4>
-          <textarea class="form-control" id="selected-options" rows="7" readOnly value={JSON.stringify(this.state.options, null, 2)}></textarea>
-        </div>
-        <div className="col">
-          <h4><i>Preview</i></h4>
-          <AnalogClock {...this.state.options} />
+        <div className="row mt-3">
+          <div className="col-6 border-right">
+            <h4><i>Options</i></h4>
+            <textarea className="form-control" id="selected-options" rows="12" readOnly value={JSON.stringify(this.state.options, null, 2)}></textarea>
+          </div>
+          <div className="col-6">
+            <h4><i>Preview</i></h4>
+            <AnalogClock {...this.state.options} />
+          </div>
         </div>
       </div>
     );

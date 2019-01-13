@@ -28,10 +28,10 @@ const ClockCenter = styled.div`
             width: 12px;
             height: 12px;
             border: 2px solid #fff;
-            background-color: #459cff;
+            background-color: ${props => props.centerColor ? props.centerColor : "#459cff"};
             border-radius: 100%;
             margin-left: -6px;
-            margin-top: -9px;
+            margin-top: -6px;
             z-index: 100;
         `;
 
@@ -39,10 +39,10 @@ const ClockHand = styled.div`
             position: absolute;
             top: 50%;
             left: ${props => props.type === 'second' ? "40%" : "45%"};
-            outline: ${props => props.type === 'second' ? "2px solid #d81c7a" : "2px solid #fff"};
 
             ${props => props.type === 'second' && css`
-                    width:60%;
+                    width: 59.4%;
+                    outline: ${props => props.handColors && props.handColors.second ? "2px solid " + props.handColors.second : "2px solid #d81c7a"};
                     transform-origin: 17%;
                     transform: rotate(${props => props.handAngle}deg);
                     transition: ${props => props.handAngle > 270 && 'transform 250ms ease-in-out'};
@@ -50,11 +50,13 @@ const ClockHand = styled.div`
             `}
             ${props => props.type === 'minute' && css`
                     width:45%;
-                    transform-origin: 12%;
+                    outline: ${props => props.handColors && props.handColors.minute ? "2px solid " + props.handColors.minute : "2px solid #fff"};
+                    transform-origin: 11.5%;
                     transform: rotate(${props => props.handAngle}deg);
             `}
             ${props => props.type === 'hour' && css`
                     width:35%;
+                    outline: ${props => props.handColors && props.handColors.hour ? "2px solid " + props.handColors.hour : "2px solid #fff"};
                     transform-origin: 15%;
                     transform: rotate(${props => props.handAngle}deg);
             `}
