@@ -28,13 +28,13 @@ class Form extends Component {
 
     setColor = (event) => {
         event.preventDefault();
-        this.setState({ options: { ...this.state.options, [event.target.name]: event.target.value } })
+        this.setState({ options: { ...this.state.options, [event.target.name]: '#' + event.target.value } })
     }
 
     setHandColor = (event) => {
         event.preventDefault();
         let handColors = { ...this.state.options.handColors };
-        handColors[event.target.name] = event.target.value;
+        handColors[event.target.name] = '#' + event.target.value;
         this.setState({ options: { ...this.state.options, handColors } });
     }
 
