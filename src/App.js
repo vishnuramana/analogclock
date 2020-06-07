@@ -5,10 +5,12 @@ import AnalogClock from './AnalogClock.js'
 
 class App extends Component {
 
+  interval = null;
   constructor(props) {
     super(props);
     this.state = {
       options: {
+        useCustomTime: false,
         width: "300px",
         border: true,
         borderColor: "#2e2e2e",
@@ -18,14 +20,37 @@ class App extends Component {
           second: "#d81c7a",
           minute: "#fff",
           hour: "#fff"
-        }
+        },
       }
     };
-    this.customizeClock = this.customizeClock.bind(this);
   }
 
-  customizeClock(options) {
-    this.setState({ options: { ...options } });
+
+  updateClock = () => {
+    let ausTime = new Date().toLocaleString("en-US", { timeZone: "Australia/Brisbane" });
+    let date = new Date(ausTime);
+
+    this.setState({
+      'options': {
+        ...this.state.options,
+        seconds: date.getSeconds(),
+        minutes: date.getMinutes(),
+        hours: date.getHours()
+      }
+    })
+  }
+
+  customizeClock = (options) => {
+    let _options = options;
+    if (_options.useCustomTime) {
+      this.interval = setInterval(this.updateClock, 1000);
+    } else {
+      clearInterval(this.interval);
+      delete _options.seconds;
+      delete _options.minutes;
+      delete _options.hours;
+    }
+    this.setState({ options: { ..._options } });
   }
 
   render() {
@@ -42,6 +67,7 @@ class App extends Component {
           <div className="col-6">
             <h4><i>Preview</i></h4>
             <AnalogClock {...this.state.options} />
+            {this.state.options.useCustomTime ? <p style={{ paddingTop: '5px', paddingLeft: '20px' }}><i>Timezone: Australia/Brisbane</i></p> : null}
           </div>
         </div>
       </div>

@@ -15,6 +15,12 @@ class Form extends Component {
         this.setState({ options: { ...this.state.options, width } })
     }
 
+    setCustomTime = (event) => {
+        let useCustomTime = event.target.value === 'yes';
+        this.setState({ options: { ...this.state.options, useCustomTime } })
+    }
+
+
     setBorderReq = (event) => {
         let border = event.target.value === 'yes';
         this.setState({ options: { ...this.state.options, border } })
@@ -22,13 +28,13 @@ class Form extends Component {
 
     setColor = (event) => {
         event.preventDefault();
-        this.setState({ options: { ...this.state.options, [event.target.name]: event.target.value } })
+        this.setState({ options: { ...this.state.options, [event.target.name]: '#' + event.target.value } })
     }
 
     setHandColor = (event) => {
         event.preventDefault();
         let handColors = { ...this.state.options.handColors };
-        handColors[event.target.name] = event.target.value;
+        handColors[event.target.name] = '#' + event.target.value;
         this.setState({ options: { ...this.state.options, handColors } });
     }
 
@@ -75,13 +81,24 @@ class Form extends Component {
                             <input type="range" min="200" max="500" className="form-control-range" id="clock-size" onChange={this.setClockSize} />
                         </div>
                         <div className="form-group">
+                            <label htmlFor="border-req-radios">Use Custom Time?</label>
+                            <div className="form-check" name="custom-time-radios">
+                                <input className="form-check-input" type="radio" name="custom-time-yes" id="custom-time-yes" value="yes" checked={this.state.options.useCustomTime === true} onChange={this.setCustomTime} />
+                                <label className="form-check-label" htmlFor="custom-time-yes">Yes</label>
+                            </div>
+                            <div className="form-check">
+                                <input className="form-check-input" type="radio" name="custom-time-no" id="custom-time-no" value="no" checked={this.state.options.useCustomTime === false} onChange={this.setCustomTime} />
+                                <label className="form-check-label" htmlFor="custom-time-no">No</label>
+                            </div>
+                        </div>
+                        <div className="form-group">
                             <label htmlFor="border-req-radios">Border Required?</label>
                             <div className="form-check" name="border-req-radios">
-                                <input className="form-check-input" type="radio" name="border-req-yes" id="border-req-yes" value="yes" checked={this.state.options.border === true} onClick={this.setBorderReq} />
+                                <input className="form-check-input" type="radio" name="border-req-yes" id="border-req-yes" value="yes" checked={this.state.options.border === true} onChange={this.setBorderReq} />
                                 <label className="form-check-label" htmlFor="border-req-yes">Yes</label>
                             </div>
                             <div className="form-check">
-                                <input className="form-check-input" type="radio" name="bored-req-no" id="bored-req-no" value="no" checked={this.state.options.border === false} onClick={this.setBorderReq} />
+                                <input className="form-check-input" type="radio" name="bored-req-no" id="bored-req-no" value="no" checked={this.state.options.border === false} onChange={this.setBorderReq} />
                                 <label className="form-check-label" htmlFor="bored-req-no">No</label>
                             </div>
                         </div>
