@@ -27,8 +27,8 @@ class App extends Component {
 
 
   updateClock = () => {
-    let usaTime = new Date().toLocaleString("en-US", { timeZone: "Australia/Brisbane" });
-    let date = new Date(usaTime);
+    let ausTime = new Date().toLocaleString("en-US", { timeZone: "Australia/Brisbane" });
+    let date = new Date(ausTime);
 
     this.setState({
       'options': {
