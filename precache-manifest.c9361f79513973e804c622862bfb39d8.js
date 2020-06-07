@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "cdb077e5888965c1bf9f",
+    "revision": "00f8503e9326fdf40c1f",
     "url": "/analogclock/static/css/main.0fe835e8.chunk.css"
   },
   {
-    "revision": "cdb077e5888965c1bf9f",
-    "url": "/analogclock/static/js/main.cdb077e5.chunk.js"
+    "revision": "00f8503e9326fdf40c1f",
+    "url": "/analogclock/static/js/main.00f8503e.chunk.js"
   },
   {
     "revision": "235cc238be2e0cd99ab2",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/analogclock/static/js/runtime~main.d29e5bdd.js"
   },
   {
-    "revision": "5eeaac52f4d91f5ca83df15c2ced2727",
+    "revision": "202645ae8ab33eb33bfb9a929c32f2d1",
     "url": "/analogclock/index.html"
   }
 ];

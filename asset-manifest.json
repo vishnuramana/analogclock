@@ -1,13 +1,13 @@
 {
   "main.css": "/analogclock/static/css/main.0fe835e8.chunk.css",
-  "main.js": "/analogclock/static/js/main.cdb077e5.chunk.js",
-  "main.js.map": "/analogclock/static/js/main.cdb077e5.chunk.js.map",
+  "main.js": "/analogclock/static/js/main.00f8503e.chunk.js",
+  "main.js.map": "/analogclock/static/js/main.00f8503e.chunk.js.map",
   "static/js/1.235cc238.chunk.js": "/analogclock/static/js/1.235cc238.chunk.js",
   "static/js/1.235cc238.chunk.js.map": "/analogclock/static/js/1.235cc238.chunk.js.map",
   "runtime~main.js": "/analogclock/static/js/runtime~main.d29e5bdd.js",
   "runtime~main.js.map": "/analogclock/static/js/runtime~main.d29e5bdd.js.map",
   "static/css/main.0fe835e8.chunk.css.map": "/analogclock/static/css/main.0fe835e8.chunk.css.map",
   "index.html": "/analogclock/index.html",
-  "precache-manifest.b542e56845cbf1f25a88234358b03203.js": "/analogclock/precache-manifest.b542e56845cbf1f25a88234358b03203.js",
+  "precache-manifest.c9361f79513973e804c622862bfb39d8.js": "/analogclock/precache-manifest.c9361f79513973e804c622862bfb39d8.js",
   "service-worker.js": "/analogclock/service-worker.js"
 }
