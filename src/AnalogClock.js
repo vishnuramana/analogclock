@@ -49,13 +49,13 @@ class AnalogClock extends Component {
     }
 
     render() {
-        const { width, border, borderColor, baseColor, centerColor, handColors } = this.props;
+        const { width, border, borderColor, baseColor, centerColor, centerBorderColor, handColors } = this.props;
         const { seconds, minutes, hours } = this.props.useCustomTime ? this.props : this.state;
         return (
             <ClockContainer width={width}>
                 <ClockBaseBorder border={border} borderColor={borderColor}>
                     <ClockBase baseColor={baseColor}>
-                        <ClockCenter centerColor={centerColor} />
+                        <ClockCenter centerColor={centerColor} centerBorderColor={centerBorderColor} />
                         <Hand type="second" seconds={seconds} handColors={handColors} />
                         <Hand type="minute" minutes={minutes} handColors={handColors} />
                         <Hand type="hour" hours={hours} handColors={handColors} />

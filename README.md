@@ -25,6 +25,7 @@ Then use the `AnalogClock` Component like this
         borderColor: "#2e2e2e",
         baseColor: "#17a2b8",
         centerColor: "#459cff",
+        centerBorderColor: "#fff",
         handColors: {
           second: "#d81c7a",
           minute: "#fff",
@@ -50,6 +51,7 @@ Please visit the [demo](http://vishnuramana.github.io/analogclock) page to get a
             borderColor: "#2e2e2e",
             baseColor: "#17a2b8",
             centerColor: "#459cff",
+            centerBorderColor: "#fff",
             handColors: {
               second: "#d81c7a",
               minute: "#fff",
