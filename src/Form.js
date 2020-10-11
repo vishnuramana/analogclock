@@ -50,12 +50,13 @@ class Form extends Component {
         let baseColor = this.getRandomColor();
         let borderColor = this.getRandomColor();
         let centerColor = this.getRandomColor();
+        let centerBorderColor = this.getRandomColor();
         let handColors = {
             second: this.getRandomColor(),
             minute: this.getRandomColor(),
             hour: this.getRandomColor()
         }
-        this.setState({ options: { ...this.state.options, borderColor, baseColor, centerColor, handColors } }, () => this.buildClock(event));
+        this.setState({ options: { ...this.state.options, borderColor, baseColor, centerColor, centerBorderColor, handColors } }, () => this.buildClock(event));
     }
 
     getRandomColor() {
@@ -115,6 +116,10 @@ class Form extends Component {
                         <div className="form-group">
                             <label htmlFor="clock-center-color">Clock center color</label>
                             <input type="input" name="centerColor" className="form-control" id="clock-center-color" maxLength="6" placeholder="459cff" onChange={this.setColor} />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="clock-center-border-color">Clock center border color</label>
+                            <input type="input" name="centerBorderColor" className="form-control" id="clock-center-border-color" maxLength="6" placeholder="fff" onChange={this.setColor} ></input>
                         </div>
                     </div>
                     <div className="col-4">

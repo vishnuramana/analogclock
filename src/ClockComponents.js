@@ -27,7 +27,7 @@ const ClockCenter = styled.div`
             top: 50%;
             width: 12px;
             height: 12px;
-            border: 2px solid #fff;
+            border: 2px solid ${props => props.centerBorderColor ? props.centerBorderColor : "#fff"};;
             background-color: ${props => props.centerColor ? props.centerColor : "#459cff"};
             border-radius: 100%;
             margin-left: -6px;
