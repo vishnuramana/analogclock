@@ -1,6 +1,6 @@
 var path = require('path');
 module.exports = {
-    entry: './src/index.js',
+    entry: './src/AnalogClock.js',
     mode: 'none',
     bail: true,
     output: {

@@ -186,6 +186,7 @@ function (_Component) {
           borderColor = _this$props.borderColor,
           baseColor = _this$props.baseColor,
           centerColor = _this$props.centerColor,
+          centerBorderColor = _this$props.centerBorderColor,
           handColors = _this$props.handColors;
 
       var _ref = this.props.useCustomTime ? this.props : this.state,
@@ -201,7 +202,8 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ClockComponents__WEBPACK_IMPORTED_MODULE_1__["ClockBase"], {
         baseColor: baseColor
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ClockComponents__WEBPACK_IMPORTED_MODULE_1__["ClockCenter"], {
-        centerColor: centerColor
+        centerColor: centerColor,
+        centerBorderColor: centerBorderColor
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Hand_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
         type: "second",
         seconds: seconds,
@@ -297,7 +299,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n            position: absolute;\n            left: 50%;\n            top: 50%;\n            width: 12px;\n            height: 12px;\n            border: 2px solid #fff;\n            background-color: ", ";\n            border-radius: 100%;\n            margin-left: -6px;\n            margin-top: -6px;\n            z-index: 100;\n        "]);
+  var data = _taggedTemplateLiteral(["\n            position: absolute;\n            left: 50%;\n            top: 50%;\n            width: 12px;\n            height: 12px;\n            border: 2px solid ", ";;\n            background-color: ", ";\n            border-radius: 100%;\n            margin-left: -6px;\n            margin-top: -6px;\n            z-index: 100;\n        "]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -353,6 +355,8 @@ var ClockBase = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(_t
   return props.baseColor ? props.baseColor : "black";
 });
 var ClockCenter = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(_templateObject4(), function (props) {
+  return props.centerBorderColor ? props.centerBorderColor : "#fff";
+}, function (props) {
   return props.centerColor ? props.centerColor : "#459cff";
 });
 var ClockHand = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(_templateObject5(), function (props) {
