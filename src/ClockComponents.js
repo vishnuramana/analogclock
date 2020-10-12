@@ -25,24 +25,24 @@ const ClockCenter = styled.div`
             position: absolute;
             left: 50%;
             top: 50%;
-            width: 12px;
-            height: 12px;
-            border: 2px solid ${props => props.centerBorderColor ? props.centerBorderColor : "#fff"};;
+            transform:translate(-50%, -50%);
+            width:5%;
+            height:5%;
+            box-shadow:0 0 0 2px ${props => props.centerBorderColor ? props.centerBorderColor : "#fff"};;
             background-color: ${props => props.centerColor ? props.centerColor : "#459cff"};
             border-radius: 100%;
-            margin-left: -6px;
-            margin-top: -6px;
             z-index: 100;
         `;
 
 const ClockHand = styled.div`
             position: absolute;
             top: 50%;
+            transform:translate(-50%, -50%);
             left: ${props => props.type === 'second' ? "40%" : "45%"};
 
             ${props => props.type === 'second' && css`
-                    width: 59.4%;
-                    outline: ${props => props.handColors && props.handColors.second ? "2px solid " + props.handColors.second : "2px solid #d81c7a"};
+                    width: 55%;
+                    outline: ${props => props.handColors && props.handColors.second ? "1px solid " + props.handColors.second : "1px solid #d81c7a"};
                     transform-origin: 17%;
                     transform: rotate(${props => props.handAngle}deg);
                     transition: ${props => props.handAngle > 270 && 'transform 250ms ease-in-out'};
