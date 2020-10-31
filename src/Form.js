@@ -78,8 +78,8 @@ class Form extends Component {
                 <div className="row">
                     <div className="col-4">
                         <div className="form-group">
-                            <label htmlFor="clock-size">Clock size (px)</label>
-                            <input type="range" min="200" max="500" className="form-control-range" id="clock-size" onChange={this.setClockSize} />
+                            <label htmlFor="clock-size">Clock size (px): {this.state.options.width}</label>
+                            <input type="range" min="50" max="500" className="form-control-range" id="clock-size" onChange={this.setClockSize} />
                         </div>
                         <div className="form-group">
                             <label htmlFor="border-req-radios">Use Custom Time?</label>
