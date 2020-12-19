@@ -1,7 +1,7 @@
-import styled, { css, keyframes } from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const ClockContainer = styled.div`
-        	height: ${props => props.width || "400px"};
+            height: ${props => props.width || "400px"};
             width: ${props => props.width || "400px"};
         `;
 
@@ -44,17 +44,17 @@ const ClockHand = styled.div`
             ${props => props.type === 'second' && css`
                     width: 60%;
                     margin-left: 40%;
-                    background-color: ${props => props.handColors && props.handColors.second ? props.handColors.second : "#d81c7a" };
+                    background-color: ${props => props.handColors && props.handColors.second ? props.handColors.second : "#d81c7a"};
             `}
             ${props => props.type === 'minute' && css`
                     width: 45%;
                     margin-left: 45%;
-                    background-color: ${props => props.handColors && props.handColors.minute ? props.handColors.minute : "#fff" };
+                    background-color: ${props => props.handColors && props.handColors.minute ? props.handColors.minute : "#fff"};
             `}
             ${props => props.type === 'hour' && css`
                     width: 35%;
                     margin-left: 45%;
-                    background-color: ${props => props.handColors && props.handColors.hour ? props.handColors.hour : "#fff" };
+                    background-color: ${props => props.handColors && props.handColors.hour ? props.handColors.hour : "#fff"};
             `}
         `;
 

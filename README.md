@@ -64,7 +64,7 @@ Please visit the [demo](http://vishnuramana.github.io/analogclock) page to get a
 
     Once you do that, `AnalogClock` will expect you to give it the `hours`, `minutes` and `seconds` value.
     
-    *Note: You will have to use a setInterval in the component where you use `<AnalogClock>` to update the `options` object with the time that you pass. An example is given below:
+    *Note: You will have to use a setInterval in the component where you use `<AnalogClock>` to update the `options` object with the time that you pass. An example is given below:*
     
       updateClock = () => {
         let ausTime = new Date().toLocaleString("en-US", { timeZone: "Australia/Brisbane" });
@@ -82,9 +82,11 @@ Please visit the [demo](http://vishnuramana.github.io/analogclock) page to get a
       ....
       this.interval = setInterval(this.updateClock, 1000);
 
-## Future Development
+## Change Log
 
-  - @keyframes support for smooth rotation of second hand.
+  - **v1.2.2**
+    - Fixed clock hand centering issues
+    - Removed unwanted
 
 ## Contribution
 
