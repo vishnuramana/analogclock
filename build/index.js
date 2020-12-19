@@ -95,7 +95,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _ClockComponents__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var _Hand_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(20);
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -103,15 +103,19 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -119,19 +123,19 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-var AnalogClock =
-/*#__PURE__*/
-function (_Component) {
+var AnalogClock = /*#__PURE__*/function (_Component) {
   _inherits(AnalogClock, _Component);
+
+  var _super = _createSuper(AnalogClock);
 
   function AnalogClock(props) {
     var _this;
 
     _classCallCheck(this, AnalogClock);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(AnalogClock).call(this, props));
+    _this = _super.call(this, props);
 
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "initClock", function () {
+    _defineProperty(_assertThisInitialized(_this), "initClock", function () {
       var date = new Date();
       return {
         seconds: date.getSeconds(),
@@ -140,7 +144,7 @@ function (_Component) {
       };
     });
 
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "setupInterval", function () {
+    _defineProperty(_assertThisInitialized(_this), "setupInterval", function () {
       _this.interval = setInterval(function () {
         var date = new Date();
 
@@ -194,25 +198,25 @@ function (_Component) {
           minutes = _ref.minutes,
           hours = _ref.hours;
 
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ClockComponents__WEBPACK_IMPORTED_MODULE_1__["ClockContainer"], {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ClockComponents__WEBPACK_IMPORTED_MODULE_1__["ClockContainer"], {
         width: width
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ClockComponents__WEBPACK_IMPORTED_MODULE_1__["ClockBaseBorder"], {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ClockComponents__WEBPACK_IMPORTED_MODULE_1__["ClockBaseBorder"], {
         border: border,
         borderColor: borderColor
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ClockComponents__WEBPACK_IMPORTED_MODULE_1__["ClockBase"], {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ClockComponents__WEBPACK_IMPORTED_MODULE_1__["ClockBase"], {
         baseColor: baseColor
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ClockComponents__WEBPACK_IMPORTED_MODULE_1__["ClockCenter"], {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ClockComponents__WEBPACK_IMPORTED_MODULE_1__["ClockCenter"], {
         centerColor: centerColor,
         centerBorderColor: centerBorderColor
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Hand_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Hand_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
         type: "second",
         seconds: seconds,
         handColors: handColors
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Hand_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Hand_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
         type: "minute",
         minutes: minutes,
         handColors: handColors
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Hand_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Hand_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
         type: "hour",
         hours: hours,
         handColors: handColors
@@ -247,9 +251,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ClockBase", function() { return ClockBase; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ClockCenter", function() { return ClockCenter; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ClockHand", function() { return ClockHand; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ClockHandContainer", function() { return ClockHandContainer; });
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
 function _templateObject9() {
-  var data = _taggedTemplateLiteral(["\n    from {\n        transform: rotate(", "deg)}\n    }\n    to {\n        transform: rotate(", "deg)}\n    }"]);
+  var data = _taggedTemplateLiteral(["\n        position: absolute;\n        width: 100%\n        height: 100%;\n        display: flex;\n        align-items: center;\n\n        transform: rotate(", "deg);\n        transition: ", ";\n    "]);
 
   _templateObject9 = function _templateObject9() {
     return data;
@@ -259,7 +264,7 @@ function _templateObject9() {
 }
 
 function _templateObject8() {
-  var data = _taggedTemplateLiteral(["\n                    width:35%;\n                    outline: ", ";\n                    transform-origin: 15%;\n                    transform: rotate(", "deg);\n            "]);
+  var data = _taggedTemplateLiteral(["\n                    width: 35%;\n                    margin-left: 45%;\n                    background-color: ", ";\n            "]);
 
   _templateObject8 = function _templateObject8() {
     return data;
@@ -269,7 +274,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n                    width:45%;\n                    outline: ", ";\n                    transform-origin: 11.5%;\n                    transform: rotate(", "deg);\n            "]);
+  var data = _taggedTemplateLiteral(["\n                    width: 45%;\n                    margin-left: 45%;\n                    background-color: ", ";\n            "]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -279,7 +284,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n                    width: 59.4%;\n                    outline: ", ";\n                    transform-origin: 17%;\n                    transform: rotate(", "deg);\n                    transition: ", ";\n                    // animation: ", " 60s linear 0s infinite;\n            "]);
+  var data = _taggedTemplateLiteral(["\n                    width: 60%;\n                    margin-left: 40%;\n                    background-color: ", ";\n            "]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -289,7 +294,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n            position: absolute;\n            top: 50%;\n            left: ", ";\n\n            ", "\n            ", "\n            ", "\n        "]);
+  var data = _taggedTemplateLiteral(["\n        box-sizing: border-box;\n        height: 1.5%;\n        min-height: 2px;\n        max-height: 6px;\n\n            ", "\n            ", "\n            ", "\n        "]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -329,7 +334,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n        \theight: ", ";\n            width: ", ";\n        "]);
+  var data = _taggedTemplateLiteral(["\n            height: ", ";\n            width: ", ";\n        "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -349,7 +354,7 @@ var ClockContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].d
 var ClockBaseBorder = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(_templateObject2(), function (props) {
   return props.borderColor ? props.borderColor : "transparent";
 }, function (props) {
-  return props.border ? "5% 5% 5% 5%" : "0";
+  return props.border ? "5%" : "0";
 });
 var ClockBase = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(_templateObject3(), function (props) {
   return props.baseColor ? props.baseColor : "black";
@@ -360,35 +365,23 @@ var ClockCenter = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(
   return props.centerColor ? props.centerColor : "#459cff";
 });
 var ClockHand = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(_templateObject5(), function (props) {
-  return props.type === 'second' ? "40%" : "45%";
-}, function (props) {
   return props.type === 'second' && Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["css"])(_templateObject6(), function (props) {
-    return props.handColors && props.handColors.second ? "2px solid " + props.handColors.second : "2px solid #d81c7a";
-  }, function (props) {
-    return props.handAngle;
-  }, function (props) {
-    return props.handAngle > 270 && 'transform 250ms ease-in-out';
-  }, function (props) {
-    return props.secondStartAngle && sweep(props.secondStartAngle);
+    return props.handColors && props.handColors.second ? props.handColors.second : "#d81c7a";
   });
 }, function (props) {
   return props.type === 'minute' && Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["css"])(_templateObject7(), function (props) {
-    return props.handColors && props.handColors.minute ? "2px solid " + props.handColors.minute : "2px solid #fff";
-  }, function (props) {
-    return props.handAngle;
+    return props.handColors && props.handColors.minute ? props.handColors.minute : "#fff";
   });
 }, function (props) {
   return props.type === 'hour' && Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["css"])(_templateObject8(), function (props) {
-    return props.handColors && props.handColors.hour ? "2px solid " + props.handColors.hour : "2px solid #fff";
-  }, function (props) {
-    return props.handAngle;
+    return props.handColors && props.handColors.hour ? props.handColors.hour : "#fff";
   });
 });
-
-var sweep = function sweep(secondStartAngle) {
-  return Object(styled_components__WEBPACK_IMPORTED_MODULE_0__["keyframes"])(_templateObject9(), secondStartAngle, secondStartAngle + 360);
-};
-
+var ClockHandContainer = styled_components__WEBPACK_IMPORTED_MODULE_0__["default"].div(_templateObject9(), function (props) {
+  return props.handAngle;
+}, function (props) {
+  return props.handAngle > 270 && 'transform 250ms ease-in-out';
+});
 
 
 /***/ }),
@@ -4495,12 +4488,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isBlob", function() { return isBlob; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isBoolean", function() { return isBoolean; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isDate", function() { return isDate; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isEmptyArray", function() { return isEmptyArray; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isEmptyObject", function() { return isEmptyObject; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isEmptyString", function() { return isEmptyString; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isError", function() { return isError; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isFile", function() { return isFile; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isFullArray", function() { return isFullArray; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isFullString", function() { return isFullString; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isFunction", function() { return isFunction; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isMap", function() { return isMap; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isNaNValue", function() { return isNaNValue; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isNull", function() { return isNull; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isNullOrUndefined", function() { return isNullOrUndefined; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isNumber", function() { return isNumber; });
@@ -4548,7 +4545,7 @@ function isNull(payload) {
  * Returns whether the payload is a plain JavaScript object (excluding special classes or objects with other prototypes)
  *
  * @param {*} payload
- * @returns {payload is {[key: string]: any}}
+ * @returns {payload is Record<string, any>}
  */
 function isPlainObject(payload) {
     if (getType(payload) !== 'Object')
@@ -4559,16 +4556,25 @@ function isPlainObject(payload) {
  * Returns whether the payload is a plain JavaScript object (excluding special classes or objects with other prototypes)
  *
  * @param {*} payload
- * @returns {payload is {[key: string]: any}}
+ * @returns {payload is Record<string, any>}
  */
 function isObject(payload) {
     return isPlainObject(payload);
 }
 /**
+ * Returns whether the payload is a an empty object (excluding special classes or objects with other prototypes)
+ *
+ * @param {*} payload
+ * @returns {payload is { [K in any]: never }}
+ */
+function isEmptyObject(payload) {
+    return isPlainObject(payload) && Object.keys(payload).length === 0;
+}
+/**
  * Returns whether the payload is an any kind of object (including special classes or objects with different prototypes)
  *
  * @param {*} payload
- * @returns {payload is {[key: string]: any}}
+ * @returns {payload is Record<string, any>}
  */
 function isAnyObject(payload) {
     return getType(payload) === 'Object';
@@ -4586,22 +4592,40 @@ function isObjectLike(payload) {
     return isAnyObject(payload);
 }
 /**
- * Returns whether the payload is a function
+ * Returns whether the payload is a function (regular or async)
  *
  * @param {*} payload
- * @returns {payload is Function}
+ * @returns {payload is AnyFunction}
  */
 function isFunction(payload) {
-    return getType(payload) === 'Function';
+    return typeof payload === "function";
 }
 /**
  * Returns whether the payload is an array
  *
- * @param {*} payload
- * @returns {payload is undefined}
+ * @param {any} payload
+ * @returns {payload is any[]}
  */
 function isArray(payload) {
     return getType(payload) === 'Array';
+}
+/**
+ * Returns whether the payload is a an array with at least 1 item
+ *
+ * @param {*} payload
+ * @returns {payload is any[]}
+ */
+function isFullArray(payload) {
+    return isArray(payload) && payload.length > 0;
+}
+/**
+ * Returns whether the payload is a an empty array
+ *
+ * @param {*} payload
+ * @returns {payload is []}
+ */
+function isEmptyArray(payload) {
+    return isArray(payload) && payload.length === 0;
 }
 /**
  * Returns whether the payload is a string
@@ -4631,9 +4655,9 @@ function isEmptyString(payload) {
     return payload === '';
 }
 /**
- * Returns whether the payload is a number
+ * Returns whether the payload is a number (but not NaN)
  *
- * This will return false for NaN
+ * This will return `false` for `NaN`!!
  *
  * @param {*} payload
  * @returns {payload is number}
@@ -4663,7 +4687,7 @@ function isRegExp(payload) {
  * Returns whether the payload is a Map
  *
  * @param {*} payload
- * @returns {payload is Map}
+ * @returns {payload is Map<any, any>}
  */
 function isMap(payload) {
     return getType(payload) === 'Map';
@@ -4672,7 +4696,7 @@ function isMap(payload) {
  * Returns whether the payload is a WeakMap
  *
  * @param {*} payload
- * @returns {payload is WeakMap}
+ * @returns {payload is WeakMap<any, any>}
  */
 function isWeakMap(payload) {
     return getType(payload) === 'WeakMap';
@@ -4681,7 +4705,7 @@ function isWeakMap(payload) {
  * Returns whether the payload is a Set
  *
  * @param {*} payload
- * @returns {payload is Set}
+ * @returns {payload is Set<any>}
  */
 function isSet(payload) {
     return getType(payload) === 'Set';
@@ -4690,7 +4714,7 @@ function isSet(payload) {
  * Returns whether the payload is a WeakSet
  *
  * @param {*} payload
- * @returns {payload is WeakSet}
+ * @returns {payload is WeakSet<any>}
  */
 function isWeakSet(payload) {
     return getType(payload) === 'WeakSet';
@@ -4735,7 +4759,7 @@ function isFile(payload) {
  * Returns whether the payload is a Promise
  *
  * @param {*} payload
- * @returns {payload is Promise}
+ * @returns {payload is Promise<any>}
  */
 function isPromise(payload) {
     return getType(payload) === 'Promise';
@@ -4748,6 +4772,15 @@ function isPromise(payload) {
  */
 function isError(payload) {
     return getType(payload) === 'Error';
+}
+/**
+ * Returns whether the payload is literally the value `NaN` (it's `NaN` and also a `number`)
+ *
+ * @param {*} payload
+ * @returns {payload is typeof NaN}
+ */
+function isNaNValue(payload) {
+    return getType(payload) === 'Number' && isNaN(payload);
 }
 /**
  * Returns whether the payload is a primitive type (eg. Boolean | Null | Undefined | Number | String | Symbol)
@@ -4808,9 +4841,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _ClockComponents__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var _Util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(21);
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -4818,55 +4849,46 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 
 
 
-var Hand =
-/*#__PURE__*/
-function (_Component) {
+
+var Hand = /*#__PURE__*/function (_Component) {
   _inherits(Hand, _Component);
+
+  var _super = _createSuper(Hand);
 
   function Hand(props) {
     var _this;
 
     _classCallCheck(this, Hand);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(Hand).call(this, props));
+    _this = _super.call(this, props);
     _this.state = {};
     return _this;
   }
 
   _createClass(Hand, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      if (this.props.type === 'second') {
-        var handAngle = 270 + this.props.seconds * 6;
-
-        if (!this.state.secondStartAngle) {
-          this.setState({
-            secondStartAngle: handAngle
-          });
-        }
-      }
-    }
-  }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ClockComponents__WEBPACK_IMPORTED_MODULE_1__["ClockHand"], _extends({
-        type: this.props.type,
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ClockComponents__WEBPACK_IMPORTED_MODULE_1__["ClockHandContainer"], {
         handAngle: _Util__WEBPACK_IMPORTED_MODULE_2__["default"].getHandAngle(this.props)
-      }, this.state, {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ClockComponents__WEBPACK_IMPORTED_MODULE_1__["ClockHand"], {
+        type: this.props.type,
         handColors: this.props.handColors
       }));
     }
@@ -4889,9 +4911,7 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-var Util =
-/*#__PURE__*/
-function () {
+var Util = /*#__PURE__*/function () {
   function Util() {
     _classCallCheck(this, Util);
   }
