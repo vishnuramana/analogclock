@@ -58,7 +58,7 @@ class AnalogClock extends Component {
                         <ClockCenter centerColor={centerColor} centerBorderColor={centerBorderColor} />
                         <Hand type="second" seconds={seconds} handColors={handColors} />
                         <Hand type="minute" minutes={minutes} handColors={handColors} />
-                        <Hand type="hour" hours={hours} handColors={handColors} />
+                        <Hand type="hour" hours={hours} minutes={minutes} handColors={handColors} />
                     </ClockBase>
                 </ClockBaseBorder>
             </ClockContainer>

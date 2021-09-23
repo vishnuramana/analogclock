@@ -7,7 +7,7 @@ class Util {
                 break;
             case 'minute': handAngle = (270 + (props.minutes * 6));
                 break;
-            case 'hour': handAngle = (270 + (props.hours * 30));
+            case 'hour': handAngle = (270 + (props.hours * 30) + ((props.minutes / 60) * 30));
                 break;
             default: handAngle = 0;
         }
