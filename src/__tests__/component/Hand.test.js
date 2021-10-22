@@ -21,7 +21,7 @@ describe("Hand component", () => {
   });
 
   it("matches hour Hand snapshot", () => {
-    const wrapper = shallow(<Hand type="hour" hours="10" handColors={{ hour: "#fff" }} />);
+    const wrapper = shallow(<Hand type="hour" hours="10" minutes="10" handColors={{ hour: "#fff" }} />);
     expect(wrapper).toMatchSnapshot();
   });
 });

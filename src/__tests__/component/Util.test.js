@@ -10,7 +10,11 @@ describe("Util tests", () => {
   });
 
   it("returns hand angle as 450 when 6 hours is passed", () => {
-    expect(Util.getHandAngle({ type: "hour", hours: "6" })).toBe(450);
+    expect(Util.getHandAngle({ type: "hour", hours: "6" , minutes:"0" })).toBe(450);
+  });
+
+  it("returns hand angle as 450 when 6 hours is passed", () => {
+    expect(Util.getHandAngle({ type: "hour", hours: "6" , minutes:"31" })).toBe(465.5);
   });
 
   it("returns hand angle as 0 when type is not passed", () => {

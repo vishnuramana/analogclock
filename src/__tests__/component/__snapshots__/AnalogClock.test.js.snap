@@ -46,6 +46,7 @@ exports[`AnalogClock component matches snapshot 1`] = `
           }
         }
         hours={10}
+        minutes={10}
         type="hour"
       />
     </styled.div>

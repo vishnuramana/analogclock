@@ -2,7 +2,7 @@
 
 exports[`Hand component matches hour Hand snapshot 1`] = `
 <styled.div
-  handAngle={570}
+  handAngle={575}
 >
   <styled.div
     handColors={
