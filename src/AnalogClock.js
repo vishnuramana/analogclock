@@ -9,7 +9,7 @@ class AnalogClock extends Component {
         this.state = this.initClock();
     }
 
-    initClock = () => {
+    initClock(){
         const date = new Date();
         return {
             seconds: date.getSeconds(),
@@ -18,7 +18,7 @@ class AnalogClock extends Component {
         }
     }
 
-    setupInterval = () => {
+    setupInterval(){
         this.interval = setInterval(() => {
             const date = new Date();
             this.setState({

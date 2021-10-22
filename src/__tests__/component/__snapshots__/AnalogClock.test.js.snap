@@ -53,3 +53,57 @@ exports[`AnalogClock component matches snapshot 1`] = `
   </styled.div>
 </styled.div>
 `;
+
+exports[`AnalogClock component matches snapshot when custom time is passed 1`] = `
+<styled.div
+  width="300px"
+>
+  <styled.div
+    border={true}
+    borderColor="#2e2e2e"
+  >
+    <styled.div
+      baseColor="#17a2b8"
+    >
+      <styled.div
+        centerBorderColor="#fff"
+        centerColor="#459cff"
+      />
+      <Hand
+        handColors={
+          Object {
+            "hour": "#fff",
+            "minute": "#fff",
+            "second": "#d81c7a",
+          }
+        }
+        seconds={22}
+        type="second"
+      />
+      <Hand
+        handColors={
+          Object {
+            "hour": "#fff",
+            "minute": "#fff",
+            "second": "#d81c7a",
+          }
+        }
+        minutes={22}
+        type="minute"
+      />
+      <Hand
+        handColors={
+          Object {
+            "hour": "#fff",
+            "minute": "#fff",
+            "second": "#d81c7a",
+          }
+        }
+        hours={22}
+        minutes={22}
+        type="hour"
+      />
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;
