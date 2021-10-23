@@ -1,5 +1,7 @@
 # Analog Clock using React
 
+[![CircleCI](https://circleci.com/gh/vishnuramana/analogclock/tree/dev.svg?style=shield)](https://circleci.com/gh/vishnuramana/analogclock/tree/dev) [![Coverage Status](https://coveralls.io/repos/github/vishnuramana/analogclock/badge.svg?branch=dev)](https://coveralls.io/github/vishnuramana/analogclock?branch=dev) [![npm](https://img.shields.io/npm/dw/analog-clock-react)](https://www.npmjs.com/package/analog-clock-react) ![npm](https://img.shields.io/npm/v/analog-clock-react) [![NPM](https://img.shields.io/npm/l/analog-clock-react)](https://github.com/vishnuramana/analogclock/blob/dev/LICENSE)
+
 This is an customizable analog clock completely built using React. It is customizable by passing an options JSON Object to the component.
 
 ![Clock Preview](https://imgur.com/3kV92PJ.png)
@@ -83,14 +85,17 @@ Please visit the [demo](http://vishnuramana.github.io/analogclock) page to get a
       this.interval = setInterval(this.updateClock, 1000);
 
 ## Change Log
-
   - **v1.2.2**
     - Fixed clock hand centering issues
     - Removed unwanted
 
 ## Contribution
 
-If you wish to contribute to this project, please use the `dev` branch to add your changes and test. Once you are done with your changes, please raise a PR.
+If you wish to contribute to this project, please use the `dev` branch to add your changes and test. Make sure all the tests are passed and optimal coverage is present. Once you are done with your changes, please raise a PR.
+
+## Issues/Feature Requests
+
+For any issues/feature-requests, you can create an issue in Github or email me at [me@vishnu.codes](mailto:me@vishnu.codes)
 
 ## License
 

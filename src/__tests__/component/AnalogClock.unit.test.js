@@ -8,19 +8,26 @@ import AnalogClock from "../../AnalogClock.js";
 describe("AnalogClock component", () => {
   const initClockSpy = jest.spyOn(AnalogClock.prototype, "initClock");
   const setupIntervalSpy = jest.spyOn(AnalogClock.prototype, "setupInterval");
+  const setupTimeSpy = jest.spyOn(AnalogClock.prototype, "setupTime");
   const componentWillUnmountSpy = jest.spyOn(
     AnalogClock.prototype,
     "componentWillUnmount"
   );
 
-  jest.useFakeTimers();
-  jest.spyOn(global, "setInterval");
-  jest.spyOn(global, "clearInterval");
+  beforeEach(() => {
+    jest.useFakeTimers();
+    jest.spyOn(global, "setInterval");
+    jest.spyOn(global, "clearInterval");
+
+  })
+
 
   afterEach(() => {
     initClockSpy.mockClear();
     setupIntervalSpy.mockClear();
     componentWillUnmountSpy.mockClear();
+    setupTimeSpy.mockClear();
+    jest.useRealTimers();
   });
 
   it("mounts the component", () => {
@@ -42,6 +49,8 @@ describe("AnalogClock component", () => {
     expect(setupIntervalSpy).toHaveBeenCalledTimes(1);
     expect(setInterval).toHaveBeenCalledTimes(1);
     expect(setInterval).toHaveBeenLastCalledWith(expect.any(Function), 1000);
+    jest.advanceTimersByTime(1001);
+    expect(setupTimeSpy).toHaveBeenCalledTimes(1)
   });
 
   it("uses 12 hr time format", () => {
@@ -67,6 +76,10 @@ describe("AnalogClock component", () => {
       },
     };
     const wrapper = mount(<AnalogClock {...options} />);
+    expect(setInterval).toHaveBeenCalledTimes(1);
+    expect(setInterval).toHaveBeenLastCalledWith(expect.any(Function), 1000);
+    expect(wrapper.state("hours")).toEqual(2);
+    jest.advanceTimersByTime(1500);
     expect(wrapper.state("hours")).toEqual(2);
   });
 
@@ -114,7 +127,7 @@ describe("AnalogClock component", () => {
       hours: 22,
     });
     expect(setupIntervalSpy).toHaveBeenCalledTimes(1);
-    expect(clearInterval).toHaveBeenCalledTimes(2);
+    expect(clearInterval).toHaveBeenCalledTimes(1);
   });
 
   it("sets current time when useCustomTime is set to false", () => {
@@ -142,6 +155,5 @@ describe("AnalogClock component", () => {
       useCustomTime: false,
     });
     expect(setupIntervalSpy).toHaveBeenCalledTimes(2);
-    expect(clearInterval).toHaveBeenCalledTimes(2);
   });
 });

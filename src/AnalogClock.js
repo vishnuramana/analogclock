@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Util from './Util';
 import { ClockContainer, ClockBaseBorder, ClockBase, ClockCenter } from './ClockComponents';
 import Hand from './Hand.js';
 
@@ -9,24 +10,26 @@ class AnalogClock extends Component {
         this.state = this.initClock();
     }
 
-    initClock(){
+    initClock() {
         const date = new Date();
         return {
             seconds: date.getSeconds(),
             minutes: date.getMinutes(),
-            hours: date.getHours() > 12 ? date.getHours() - 12 : date.getHours()
+            hours: Util.getHourIn12HrFormat(date.getHours())
         }
     }
 
-    setupInterval(){
-        this.interval = setInterval(() => {
-            const date = new Date();
-            this.setState({
-                seconds: date.getSeconds(),
-                minutes: date.getMinutes(),
-                hours: date.getHours() > 12 ? date.getHours() - 12 : date.getHours()
-            })
-        }, 1000);
+    setupTime() {
+        const date = new Date();
+        this.setState({
+            seconds: date.getSeconds(),
+            minutes: date.getMinutes(),
+            hours: Util.getHourIn12HrFormat(date.getHours())
+        })
+    }
+
+    setupInterval() {
+        this.interval = setInterval(() => this.setupTime(), 1000);
     }
 
     componentDidMount() {

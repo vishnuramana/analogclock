@@ -13,6 +13,17 @@ class Util {
         }
         return handAngle;
     }
+
+    static getHourIn12HrFormat(hour) {
+        if (hour) {
+            if (hour > 12) {
+                hour -= 12;
+            }
+        } else {
+            hour = 0;
+        }
+        return hour;
+    }
 }
 
 export default Util;
