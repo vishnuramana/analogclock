@@ -138,7 +138,7 @@ class Form extends Component {
                     </div>
                 </div>
                 <div className="row col-12 d-flex justify-content-center">
-                    <button type="submit" className="btn btn-primary" onClick={this.buildClock}>Build Clock!</button>
+                    <button type="submit" id="build" className="btn btn-primary" onClick={this.buildClock}>Build Clock!</button>
                     &nbsp;
                 <button type="submit" className="btn btn-warning" onClick={this.randomClock}>Surprise Me!</button>
                 </div>
