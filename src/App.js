@@ -27,7 +27,7 @@ class App extends Component {
   }
 
 
-  updateClock = () => {
+  updateClock() {
     let ausTime = new Date().toLocaleString("en-US", { timeZone: "Australia/Brisbane" });
     let date = new Date(ausTime);
 
@@ -41,10 +41,10 @@ class App extends Component {
     })
   }
 
-  customizeClock = (options) => {
+  customizeClock(options) {
     let _options = options;
     if (_options.useCustomTime) {
-      this.interval = setInterval(this.updateClock, 1000);
+      this.interval = setInterval(() => this.updateClock(), 1000);
     } else {
       clearInterval(this.interval);
       delete _options.seconds;
@@ -58,7 +58,7 @@ class App extends Component {
     return (
       <div>
         <div className="row">
-          <Form defaultOptions={this.state.options} customizeClock={this.customizeClock} />
+          <Form defaultOptions={this.state.options} customizeClock={(options) => this.customizeClock(options)} />
         </div>
         <div className="row mt-3">
           <div className="col-6 border-right">
@@ -73,6 +73,10 @@ class App extends Component {
         </div>
       </div>
     );
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
   }
 }
 

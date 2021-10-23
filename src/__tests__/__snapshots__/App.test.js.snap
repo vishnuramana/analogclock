@@ -1,0 +1,194 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component matches snapshot 1`] = `
+<div>
+  <div
+    className="row"
+  >
+    <Form
+      customizeClock={[Function]}
+      defaultOptions={
+        Object {
+          "baseColor": "#17a2b8",
+          "border": true,
+          "borderColor": "#2e2e2e",
+          "centerBorderColor": "#fff",
+          "centerColor": "#459cff",
+          "handColors": Object {
+            "hour": "#fff",
+            "minute": "#fff",
+            "second": "#d81c7a",
+          },
+          "useCustomTime": false,
+          "width": "300px",
+        }
+      }
+    />
+  </div>
+  <div
+    className="row mt-3"
+  >
+    <div
+      className="col-6 border-right"
+    >
+      <h4>
+        <i>
+          Options
+        </i>
+      </h4>
+      <textarea
+        className="form-control"
+        id="selected-options"
+        readOnly={true}
+        rows="12"
+        value="{
+  \\"useCustomTime\\": false,
+  \\"width\\": \\"300px\\",
+  \\"border\\": true,
+  \\"borderColor\\": \\"#2e2e2e\\",
+  \\"baseColor\\": \\"#17a2b8\\",
+  \\"centerColor\\": \\"#459cff\\",
+  \\"centerBorderColor\\": \\"#fff\\",
+  \\"handColors\\": {
+    \\"second\\": \\"#d81c7a\\",
+    \\"minute\\": \\"#fff\\",
+    \\"hour\\": \\"#fff\\"
+  }
+}"
+      />
+    </div>
+    <div
+      className="col-6"
+    >
+      <h4>
+        <i>
+          Preview
+        </i>
+      </h4>
+      <AnalogClock
+        baseColor="#17a2b8"
+        border={true}
+        borderColor="#2e2e2e"
+        centerBorderColor="#fff"
+        centerColor="#459cff"
+        handColors={
+          Object {
+            "hour": "#fff",
+            "minute": "#fff",
+            "second": "#d81c7a",
+          }
+        }
+        useCustomTime={false}
+        width="300px"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`App component matches snapshot when options are changed 1`] = `
+<div>
+  <div
+    className="row"
+  >
+    <Form
+      customizeClock={[Function]}
+      defaultOptions={
+        Object {
+          "baseColor": "red",
+          "border": false,
+          "borderColor": "#fff",
+          "centerBorderColor": "black",
+          "centerColor": "blue",
+          "handColors": Object {
+            "hour": "#fff",
+            "minute": "#fff",
+            "second": "#d81c7a",
+          },
+          "hours": 10,
+          "minutes": 10,
+          "seconds": 10,
+          "useCustomTime": true,
+          "width": "300px",
+        }
+      }
+    />
+  </div>
+  <div
+    className="row mt-3"
+  >
+    <div
+      className="col-6 border-right"
+    >
+      <h4>
+        <i>
+          Options
+        </i>
+      </h4>
+      <textarea
+        className="form-control"
+        id="selected-options"
+        readOnly={true}
+        rows="12"
+        value="{
+  \\"useCustomTime\\": true,
+  \\"width\\": \\"300px\\",
+  \\"border\\": false,
+  \\"borderColor\\": \\"#fff\\",
+  \\"baseColor\\": \\"red\\",
+  \\"centerColor\\": \\"blue\\",
+  \\"centerBorderColor\\": \\"black\\",
+  \\"handColors\\": {
+    \\"second\\": \\"#d81c7a\\",
+    \\"minute\\": \\"#fff\\",
+    \\"hour\\": \\"#fff\\"
+  },
+  \\"seconds\\": 10,
+  \\"minutes\\": 10,
+  \\"hours\\": 10
+}"
+      />
+    </div>
+    <div
+      className="col-6"
+    >
+      <h4>
+        <i>
+          Preview
+        </i>
+      </h4>
+      <AnalogClock
+        baseColor="red"
+        border={false}
+        borderColor="#fff"
+        centerBorderColor="black"
+        centerColor="blue"
+        handColors={
+          Object {
+            "hour": "#fff",
+            "minute": "#fff",
+            "second": "#d81c7a",
+          }
+        }
+        hours={10}
+        minutes={10}
+        seconds={10}
+        useCustomTime={true}
+        width="300px"
+      />
+      <p
+        style={
+          Object {
+            "paddingLeft": "20px",
+            "paddingTop": "5px",
+          }
+        }
+      >
+        <i>
+          Timezone: Australia/Brisbane
+        </i>
+      </p>
+    </div>
+  </div>
+</div>
+`;

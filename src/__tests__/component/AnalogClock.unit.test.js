@@ -16,9 +16,6 @@ describe("AnalogClock component", () => {
 
   beforeEach(() => {
     jest.useFakeTimers();
-    jest.spyOn(global, "setInterval");
-    jest.spyOn(global, "clearInterval");
-
   })
 
 
