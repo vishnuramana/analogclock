@@ -29,6 +29,18 @@
   "jest": {
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": -10
+      }
+    },
+    "collectCoverageFrom": [
+      "src/**/*.{js}",
+      "!src/index.js"
     ]
   },
   "browserslist": [

@@ -99,7 +99,7 @@ class Form extends Component {
                                 <label className="form-check-label" htmlFor="border-req-yes">Yes</label>
                             </div>
                             <div className="form-check">
-                                <input className="form-check-input" type="radio" name="bored-req-no" id="bored-req-no" value="no" checked={this.state.options.border === false} onChange={this.setBorderReq} />
+                                <input className="form-check-input" type="radio" name="bored-req-no" id="border-req-no" value="no" checked={this.state.options.border === false} onChange={this.setBorderReq} />
                                 <label className="form-check-label" htmlFor="bored-req-no">No</label>
                             </div>
                         </div>
@@ -140,7 +140,7 @@ class Form extends Component {
                 <div className="row col-12 d-flex justify-content-center">
                     <button type="submit" id="build" className="btn btn-primary" onClick={this.buildClock}>Build Clock!</button>
                     &nbsp;
-                <button type="submit" className="btn btn-warning" onClick={this.randomClock}>Surprise Me!</button>
+                <button type="submit" id="surprise" className="btn btn-warning" onClick={this.randomClock}>Surprise Me!</button>
                 </div>
             </form>
         )

@@ -28,8 +28,6 @@ describe("App component", () => {
     expect(renderSpy).toHaveBeenCalledTimes(1);
   });
 
-
-
   it("updates the clock when customize button is clicked", () => {
     let options = {
       width: "500px",
