@@ -64,7 +64,6 @@ const ClockHandContainer = styled.div`
         height: 100%;
         display: flex;
         align-items: center;
-
         transform: rotate(${props => props.handAngle}deg);
         transition: ${props => props.handAngle > 270 && 'transform 250ms ease-in-out'};
     `;
