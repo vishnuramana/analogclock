@@ -71,7 +71,6 @@ class Form extends Component {
     render() {
         return (
             <form className="col-12 form">
-                {console.log( this.state.options.borderColor)}
                 <div className="row col-12">
                     <h4><i>Clock Options</i></h4>
                 </div>
