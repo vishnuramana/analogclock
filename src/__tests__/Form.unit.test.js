@@ -6,6 +6,7 @@ import Form from '../Form.js';
 
 describe('Form component', () => {
     const renderSpy = jest.spyOn(Form.prototype, "render");
+    const mockCustomizeClock = jest.fn();
 
     let defaultOptions = {
         useCustomTime: false,
@@ -21,6 +22,11 @@ describe('Form component', () => {
             hour: "#fff"
         },
     }
+
+    afterEach(() => {
+        renderSpy.mockClear();
+        mockCustomizeClock.mockClear();
+    })
 
     it('mounts the component', () => {
         const wrapper = mount(<Form defaultOptions={defaultOptions} />);
@@ -63,49 +69,76 @@ describe('Form component', () => {
 
     it('sets clock border color when changed', () => {
         const wrapper = mount(<Form defaultOptions={defaultOptions} />);
-        wrapper.find('input[name="borderColor"]').simulate('change', { target: { name: 'borderColor', value: 'fff' } });
+        wrapper.setProps({
+            customizeClock: mockCustomizeClock
+        });
+        wrapper.find('input[name="borderColor"]').simulate('change', { target: { name: 'borderColor', value: '#fff' } });
         expect(wrapper.state('options').borderColor).toEqual('#fff');
+        expect(mockCustomizeClock).toBeCalledTimes(1);
     });
 
     it('sets clock base color when changed', () => {
         const wrapper = mount(<Form defaultOptions={defaultOptions} />);
-        wrapper.find('input[name="baseColor"]').simulate('change', { target: { name: 'baseColor', value: 'fff' } });
+        wrapper.setProps({
+            customizeClock: mockCustomizeClock
+        });
+        wrapper.find('input[name="baseColor"]').simulate('change', { target: { name: 'baseColor', value: '#fff' } });
         expect(wrapper.state('options').baseColor).toEqual('#fff');
+        expect(mockCustomizeClock).toBeCalledTimes(1);
     });
 
     it('sets clock center color when changed', () => {
         const wrapper = mount(<Form defaultOptions={defaultOptions} />);
-        wrapper.find('input[name="centerColor"]').simulate('change', { target: { name: 'centerColor', value: 'fff' } });
+        wrapper.setProps({
+            customizeClock: mockCustomizeClock
+        });
+        wrapper.find('input[name="centerColor"]').simulate('change', { target: { name: 'centerColor', value: '#fff' } });
         expect(wrapper.state('options').centerColor).toEqual('#fff');
+        expect(mockCustomizeClock).toBeCalledTimes(1);
     });
 
     it('sets clock center border color when changed', () => {
         const wrapper = mount(<Form defaultOptions={defaultOptions} />);
-        wrapper.find('input[name="centerBorderColor"]').simulate('change', { target: { name: 'centerBorderColor', value: 'fff' } });
+        wrapper.setProps({
+            customizeClock: mockCustomizeClock
+        });
+        wrapper.find('input[name="centerBorderColor"]').simulate('change', { target: { name: 'centerBorderColor', value: '#fff' } });
         expect(wrapper.state('options').centerBorderColor).toEqual('#fff');
+        expect(mockCustomizeClock).toBeCalledTimes(1);
     });
 
     it('sets clock second hand color when changed', () => {
         const wrapper = mount(<Form defaultOptions={defaultOptions} />);
-        wrapper.find('input[name="second"]').simulate('change', { target: { name: 'second', value: 'fff' } });
+        wrapper.setProps({
+            customizeClock: mockCustomizeClock
+        });
+        wrapper.find('input[name="second"]').simulate('change', { target: { name: 'second', value: '#fff' } });
         expect(wrapper.state('options').handColors.second).toEqual('#fff');
+        expect(mockCustomizeClock).toBeCalledTimes(1);
     });
 
     it('sets clock minute hand color when changed', () => {
         const wrapper = mount(<Form defaultOptions={defaultOptions} />);
-        wrapper.find('input[name="minute"]').simulate('change', { target: { name: 'minute', value: 'fff' } });
+        wrapper.setProps({
+            customizeClock: mockCustomizeClock
+        });
+        wrapper.find('input[name="minute"]').simulate('change', { target: { name: 'minute', value: '#fff' } });
         expect(wrapper.state('options').handColors.minute).toEqual('#fff');
+        expect(mockCustomizeClock).toBeCalledTimes(1);
     });
 
     it('sets clock hour hand border color when changed', () => {
         const wrapper = mount(<Form defaultOptions={defaultOptions} />);
-        wrapper.find('input[name="hour"]').simulate('change', { target: { name: 'hour', value: 'fff' } });
+        wrapper.setProps({
+            customizeClock: mockCustomizeClock
+        });
+        wrapper.find('input[name="hour"]').simulate('change', { target: { name: 'hour', value: '#fff' } });
         expect(wrapper.state('options').handColors.hour).toEqual('#fff');
+        expect(mockCustomizeClock).toBeCalledTimes(1);
     });
 
     it('sets random clock colors Surprise Me button is clicked', () => {
         const wrapper = mount(<Form defaultOptions={defaultOptions} />);
-        const mockCustomizeClock = jest.fn();
         wrapper.setProps({
             customizeClock: mockCustomizeClock
         });
@@ -120,4 +153,4 @@ describe('Form component', () => {
         expect(wrapper.state('options').handColors.hour).not.toEqual('#fff');
         expect(mockCustomizeClock).toBeCalledTimes(1);
     });
-})
+});

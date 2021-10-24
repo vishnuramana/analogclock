@@ -152,7 +152,8 @@ exports[`Form component matches snapshot 1`] = `
           name="borderColor"
           onChange={[Function]}
           placeholder="2e2e2e"
-          type="input"
+          type="color"
+          value="#2e2e2e"
         />
       </div>
       <div
@@ -170,7 +171,8 @@ exports[`Form component matches snapshot 1`] = `
           name="baseColor"
           onChange={[Function]}
           placeholder="17a2b8"
-          type="input"
+          type="color"
+          value="#17a2b8"
         />
       </div>
       <div
@@ -188,7 +190,8 @@ exports[`Form component matches snapshot 1`] = `
           name="centerColor"
           onChange={[Function]}
           placeholder="459cff"
-          type="input"
+          type="color"
+          value="#459cff"
         />
       </div>
       <div
@@ -206,7 +209,8 @@ exports[`Form component matches snapshot 1`] = `
           name="centerBorderColor"
           onChange={[Function]}
           placeholder="fff"
-          type="input"
+          type="color"
+          value="#fff"
         />
       </div>
     </div>
@@ -228,7 +232,8 @@ exports[`Form component matches snapshot 1`] = `
           name="second"
           onChange={[Function]}
           placeholder="d81c7a"
-          type="input"
+          type="color"
+          value="#d81c7a"
         />
       </div>
       <div
@@ -246,7 +251,8 @@ exports[`Form component matches snapshot 1`] = `
           name="minute"
           onChange={[Function]}
           placeholder="fff"
-          type="input"
+          type="color"
+          value="#fff"
         />
       </div>
       <div
@@ -264,7 +270,8 @@ exports[`Form component matches snapshot 1`] = `
           name="hour"
           onChange={[Function]}
           placeholder="fff"
-          type="input"
+          type="color"
+          value="#fff"
         />
       </div>
     </div>

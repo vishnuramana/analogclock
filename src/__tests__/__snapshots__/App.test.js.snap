@@ -12,11 +12,11 @@ exports[`App component matches snapshot 1`] = `
           "baseColor": "#17a2b8",
           "border": true,
           "borderColor": "#2e2e2e",
-          "centerBorderColor": "#fff",
+          "centerBorderColor": "#ffffff",
           "centerColor": "#459cff",
           "handColors": Object {
-            "hour": "#fff",
-            "minute": "#fff",
+            "hour": "#ffffff",
+            "minute": "#ffffff",
             "second": "#d81c7a",
           },
           "useCustomTime": false,
@@ -48,11 +48,11 @@ exports[`App component matches snapshot 1`] = `
   \\"borderColor\\": \\"#2e2e2e\\",
   \\"baseColor\\": \\"#17a2b8\\",
   \\"centerColor\\": \\"#459cff\\",
-  \\"centerBorderColor\\": \\"#fff\\",
+  \\"centerBorderColor\\": \\"#ffffff\\",
   \\"handColors\\": {
     \\"second\\": \\"#d81c7a\\",
-    \\"minute\\": \\"#fff\\",
-    \\"hour\\": \\"#fff\\"
+    \\"minute\\": \\"#ffffff\\",
+    \\"hour\\": \\"#ffffff\\"
   }
 }"
       />
@@ -69,12 +69,12 @@ exports[`App component matches snapshot 1`] = `
         baseColor="#17a2b8"
         border={true}
         borderColor="#2e2e2e"
-        centerBorderColor="#fff"
+        centerBorderColor="#ffffff"
         centerColor="#459cff"
         handColors={
           Object {
-            "hour": "#fff",
-            "minute": "#fff",
+            "hour": "#ffffff",
+            "minute": "#ffffff",
             "second": "#d81c7a",
           }
         }
@@ -101,8 +101,8 @@ exports[`App component matches snapshot when options are changed 1`] = `
           "centerBorderColor": "black",
           "centerColor": "blue",
           "handColors": Object {
-            "hour": "#fff",
-            "minute": "#fff",
+            "hour": "#ffffff",
+            "minute": "#ffffff",
             "second": "#d81c7a",
           },
           "hours": 10,
@@ -140,8 +140,8 @@ exports[`App component matches snapshot when options are changed 1`] = `
   \\"centerBorderColor\\": \\"black\\",
   \\"handColors\\": {
     \\"second\\": \\"#d81c7a\\",
-    \\"minute\\": \\"#fff\\",
-    \\"hour\\": \\"#fff\\"
+    \\"minute\\": \\"#ffffff\\",
+    \\"hour\\": \\"#ffffff\\"
   },
   \\"seconds\\": 10,
   \\"minutes\\": 10,
@@ -165,8 +165,8 @@ exports[`App component matches snapshot when options are changed 1`] = `
         centerColor="blue"
         handColors={
           Object {
-            "hour": "#fff",
-            "minute": "#fff",
+            "hour": "#ffffff",
+            "minute": "#ffffff",
             "second": "#d81c7a",
           }
         }

@@ -29,6 +29,7 @@ class Form extends Component {
     setColor = (event) => {
         event.preventDefault();
         this.setState({ options: { ...this.state.options, [event.target.name]: event.target.value } })
+        this.props.customizeClock(this.state.options);
     }
 
     setHandColor = (event) => {
@@ -36,6 +37,7 @@ class Form extends Component {
         let handColors = { ...this.state.options.handColors };
         handColors[event.target.name] = event.target.value;
         this.setState({ options: { ...this.state.options, handColors } });
+        this.props.customizeClock(this.state.options);
     }
 
     buildClock = (event) => {
@@ -67,7 +69,7 @@ class Form extends Component {
         }
         return colorCode;
     }
-    
+
     render() {
         return (
             <form className="col-12 form">
@@ -106,15 +108,15 @@ class Form extends Component {
                     <div className="col-4">
                         <div className="form-group">
                             <label htmlFor="clock-border-color">Clock border color</label>
-                            <input type="color"  name="borderColor" className="form-control" id="clock-border-color" maxLength="6" placeholder="2e2e2e" onChange={this.setColor} value={this.state.options.borderColor} />
+                            <input type="color" name="borderColor" className="form-control" id="clock-border-color" maxLength="6" placeholder="2e2e2e" onChange={this.setColor} value={this.state.options.borderColor} />
                         </div>
                         <div className="form-group">
                             <label htmlFor="clock-base-color">Clock base color</label>
-                            <input type="color" name="baseColor" className="form-control" id="clock-base-color" maxLength="6" placeholder="17a2b8" onChange={this.setColor}  value={this.state.options.baseColor}/>
+                            <input type="color" name="baseColor" className="form-control" id="clock-base-color" maxLength="6" placeholder="17a2b8" onChange={this.setColor} value={this.state.options.baseColor} />
                         </div>
                         <div className="form-group">
                             <label htmlFor="clock-center-color">Clock center color</label>
-                            <input type="color" name="centerColor" className="form-control" id="clock-center-color" maxLength="6" placeholder="459cff" onChange={this.setColor} value={this.state.options.centerColor}/>
+                            <input type="color" name="centerColor" className="form-control" id="clock-center-color" maxLength="6" placeholder="459cff" onChange={this.setColor} value={this.state.options.centerColor} />
                         </div>
                         <div className="form-group">
                             <label htmlFor="clock-center-border-color">Clock center border color</label>
@@ -124,22 +126,22 @@ class Form extends Component {
                     <div className="col-4">
                         <div className="form-group">
                             <label htmlFor="second-hand-color">Second Hand color</label>
-                            <input type="color" name="second" className="form-control" id="second-hand-color" maxLength="6" placeholder="d81c7a" onChange={this.setHandColor} value={this.state.options.handColors.second}/>
+                            <input type="color" name="second" className="form-control" id="second-hand-color" maxLength="6" placeholder="d81c7a" onChange={this.setHandColor} value={this.state.options.handColors.second} />
                         </div>
                         <div className="form-group">
                             <label htmlFor="minute-hand-color">Minute Hand color</label>
-                            <input type="color" name="minute" className="form-control" id="minute-hand-color" maxLength="6" placeholder="fff" onChange={this.setHandColor} value={this.state.options.handColors.minute}/>
+                            <input type="color" name="minute" className="form-control" id="minute-hand-color" maxLength="6" placeholder="fff" onChange={this.setHandColor} value={this.state.options.handColors.minute} />
                         </div>
                         <div className="form-group">
                             <label htmlFor="hour-hand-color">Hour Hand color</label>
-                            <input type="color" name="hour" className="form-control" id="hour-hand-color" maxLength="6" placeholder="fff" onChange={this.setHandColor} value={this.state.options.handColors.hour}/>
+                            <input type="color" name="hour" className="form-control" id="hour-hand-color" maxLength="6" placeholder="fff" onChange={this.setHandColor} value={this.state.options.handColors.hour} />
                         </div>
                     </div>
                 </div>
                 <div className="row col-12 d-flex justify-content-center">
                     <button type="submit" id="build" className="btn btn-primary" onClick={this.buildClock}>Build Clock!</button>
                     &nbsp;
-                <button type="submit" id="surprise" className="btn btn-warning" onClick={this.randomClock}>Surprise Me!</button>
+                    <button type="submit" id="surprise" className="btn btn-warning" onClick={this.randomClock}>Surprise Me!</button>
                 </div>
             </form>
         )
