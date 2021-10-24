@@ -1,6 +1,6 @@
 # Analog Clock using React
 
-[![CircleCI](https://circleci.com/gh/vishnuramana/analogclock/tree/dev.svg?style=shield)](https://circleci.com/gh/vishnuramana/analogclock/tree/dev) [![Coverage Status](https://coveralls.io/repos/github/vishnuramana/analogclock/badge.svg?branch=dev)](https://coveralls.io/github/vishnuramana/analogclock?branch=dev) [![npm](https://img.shields.io/npm/dw/analog-clock-react)](https://www.npmjs.com/package/analog-clock-react) ![npm](https://img.shields.io/npm/v/analog-clock-react) [![NPM](https://img.shields.io/npm/l/analog-clock-react)](https://github.com/vishnuramana/analogclock/blob/dev/LICENSE)
+[![CircleCI](https://circleci.com/gh/vishnuramana/analogclock/tree/dev.svg?style=shield)](https://circleci.com/gh/vishnuramana/analogclock/tree/dev) [![Coverage Status](https://coveralls.io/repos/github/vishnuramana/analogclock/badge.svg?branch=dev&kill_cache=1)](https://coveralls.io/github/vishnuramana/analogclock?branch=dev) [![npm](https://img.shields.io/npm/dw/analog-clock-react)](https://www.npmjs.com/package/analog-clock-react) ![npm](https://img.shields.io/npm/v/analog-clock-react) [![NPM](https://img.shields.io/npm/l/analog-clock-react)](https://github.com/vishnuramana/analogclock/blob/dev/LICENSE)
 
 This is an customizable analog clock completely built using React. It is customizable by passing an options JSON Object to the component.
 
