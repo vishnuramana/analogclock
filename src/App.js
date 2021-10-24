@@ -16,11 +16,11 @@ class App extends Component {
         borderColor: "#2e2e2e",
         baseColor: "#17a2b8",
         centerColor: "#459cff",
-        centerBorderColor: "#fff",
+        centerBorderColor: "#ffffff",
         handColors: {
           second: "#d81c7a",
-          minute: "#fff",
-          hour: "#fff"
+          minute: "#ffffff",
+          hour: "#ffffff"
         },
       }
     };
