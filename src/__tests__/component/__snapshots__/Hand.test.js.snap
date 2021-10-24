@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hand component matches hour Hand snapshot 1`] = `
+<styled.div
+  handAngle={575}
+>
+  <styled.div
+    handColors={
+      Object {
+        "hour": "#fff",
+      }
+    }
+    type="hour"
+  />
+</styled.div>
+`;
+
+exports[`Hand component matches minute Hand snapshot 1`] = `
+<styled.div
+  handAngle={330}
+>
+  <styled.div
+    handColors={
+      Object {
+        "minute": "#fff",
+      }
+    }
+    type="minute"
+  />
+</styled.div>
+`;
+
+exports[`Hand component matches second Hand snapshot 1`] = `
+<styled.div
+  handAngle={330}
+>
+  <styled.div
+    handColors={
+      Object {
+        "second": "#d81c7a",
+      }
+    }
+    type="second"
+  />
+</styled.div>
+`;

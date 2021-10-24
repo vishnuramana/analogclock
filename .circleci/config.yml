@@ -1,0 +1,38 @@
+version: 2.1
+orbs:
+  coveralls: coveralls/coveralls@1.0.6
+jobs:
+  build:
+    docker:
+      - image: cimg/node:17.0.1
+    working_directory: ~/analogclock
+    steps:
+      - checkout
+      - run: npm install
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: install-npm-wee
+          command: npm install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: test
+          command: npm run test
+      - run:
+          name: code-coverage
+          command: npm run coverage
+      - coveralls/upload
+      - store_artifacts:
+          path: test-results
+          prefix: tests
+      - store_artifacts:
+          path: coverage
+          prefix: coverage
+      - store_test_results:
+          path: test-results
+notify:
+  webhooks:
+    - url: https://coveralls.io/webhook?repo_token=${process.env.COVERALLS_REPO_TOKEN}

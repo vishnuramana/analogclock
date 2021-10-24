@@ -28,14 +28,16 @@ class Form extends Component {
 
     setColor = (event) => {
         event.preventDefault();
-        this.setState({ options: { ...this.state.options, [event.target.name]: '#' + event.target.value } })
+        this.setState({ options: { ...this.state.options, [event.target.name]: event.target.value } })
+        this.props.customizeClock(this.state.options);
     }
 
     setHandColor = (event) => {
         event.preventDefault();
         let handColors = { ...this.state.options.handColors };
-        handColors[event.target.name] = '#' + event.target.value;
+        handColors[event.target.name] = event.target.value;
         this.setState({ options: { ...this.state.options, handColors } });
+        this.props.customizeClock(this.state.options);
     }
 
     buildClock = (event) => {
@@ -68,7 +70,6 @@ class Form extends Component {
         return colorCode;
     }
 
-
     render() {
         return (
             <form className="col-12 form">
@@ -99,7 +100,7 @@ class Form extends Component {
                                 <label className="form-check-label" htmlFor="border-req-yes">Yes</label>
                             </div>
                             <div className="form-check">
-                                <input className="form-check-input" type="radio" name="bored-req-no" id="bored-req-no" value="no" checked={this.state.options.border === false} onChange={this.setBorderReq} />
+                                <input className="form-check-input" type="radio" name="bored-req-no" id="border-req-no" value="no" checked={this.state.options.border === false} onChange={this.setBorderReq} />
                                 <label className="form-check-label" htmlFor="bored-req-no">No</label>
                             </div>
                         </div>
@@ -107,40 +108,40 @@ class Form extends Component {
                     <div className="col-4">
                         <div className="form-group">
                             <label htmlFor="clock-border-color">Clock border color</label>
-                            <input type="input" name="borderColor" className="form-control" id="clock-border-color" maxLength="6" placeholder="2e2e2e" onChange={this.setColor} />
+                            <input type="color" name="borderColor" className="form-control" id="clock-border-color" maxLength="6" placeholder="2e2e2e" onChange={this.setColor} value={this.state.options.borderColor} />
                         </div>
                         <div className="form-group">
                             <label htmlFor="clock-base-color">Clock base color</label>
-                            <input type="input" name="baseColor" className="form-control" id="clock-base-color" maxLength="6" placeholder="17a2b8" onChange={this.setColor} />
+                            <input type="color" name="baseColor" className="form-control" id="clock-base-color" maxLength="6" placeholder="17a2b8" onChange={this.setColor} value={this.state.options.baseColor} />
                         </div>
                         <div className="form-group">
                             <label htmlFor="clock-center-color">Clock center color</label>
-                            <input type="input" name="centerColor" className="form-control" id="clock-center-color" maxLength="6" placeholder="459cff" onChange={this.setColor} />
+                            <input type="color" name="centerColor" className="form-control" id="clock-center-color" maxLength="6" placeholder="459cff" onChange={this.setColor} value={this.state.options.centerColor} />
                         </div>
                         <div className="form-group">
                             <label htmlFor="clock-center-border-color">Clock center border color</label>
-                            <input type="input" name="centerBorderColor" className="form-control" id="clock-center-border-color" maxLength="6" placeholder="fff" onChange={this.setColor} ></input>
+                            <input type="color" name="centerBorderColor" className="form-control" id="clock-center-border-color" maxLength="6" placeholder="fff" onChange={this.setColor} value={this.state.options.centerBorderColor}></input>
                         </div>
                     </div>
                     <div className="col-4">
                         <div className="form-group">
                             <label htmlFor="second-hand-color">Second Hand color</label>
-                            <input type="input" name="second" className="form-control" id="second-hand-color" maxLength="6" placeholder="d81c7a" onChange={this.setHandColor} />
+                            <input type="color" name="second" className="form-control" id="second-hand-color" maxLength="6" placeholder="d81c7a" onChange={this.setHandColor} value={this.state.options.handColors.second} />
                         </div>
                         <div className="form-group">
                             <label htmlFor="minute-hand-color">Minute Hand color</label>
-                            <input type="input" name="minute" className="form-control" id="minute-hand-color" maxLength="6" placeholder="fff" onChange={this.setHandColor} />
+                            <input type="color" name="minute" className="form-control" id="minute-hand-color" maxLength="6" placeholder="fff" onChange={this.setHandColor} value={this.state.options.handColors.minute} />
                         </div>
                         <div className="form-group">
                             <label htmlFor="hour-hand-color">Hour Hand color</label>
-                            <input type="input" name="hour" className="form-control" id="hour-hand-color" maxLength="6" placeholder="fff" onChange={this.setHandColor} />
+                            <input type="color" name="hour" className="form-control" id="hour-hand-color" maxLength="6" placeholder="fff" onChange={this.setHandColor} value={this.state.options.handColors.hour} />
                         </div>
                     </div>
                 </div>
                 <div className="row col-12 d-flex justify-content-center">
-                    <button type="submit" className="btn btn-primary" onClick={this.buildClock}>Build Clock!</button>
+                    <button type="submit" id="build" className="btn btn-primary" onClick={this.buildClock}>Build Clock!</button>
                     &nbsp;
-                <button type="submit" className="btn btn-warning" onClick={this.randomClock}>Surprise Me!</button>
+                    <button type="submit" id="surprise" className="btn btn-warning" onClick={this.randomClock}>Surprise Me!</button>
                 </div>
             </form>
         )
